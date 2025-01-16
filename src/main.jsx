@@ -1,19 +1,20 @@
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.jsx'
+import App from './App.jsx';
 import Error from './Pages/Error';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
-import About from './Pages/About';
+import Aboutme from './Pages/Aboutme';
 import Resume from './Pages/Resume';
 import Portfolio from './Pages/Portfolio';
-import './index.css'
+// import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary
+import './index.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />,
+    errorElement: <Error />, // Default error handling for routing issues
     children: [
       {
         index: true,
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/About',
-        element: <About />,
+        element: <Aboutme />,
       },
       {
         path: '/Portfolio',
@@ -38,7 +39,9 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
-);
 
+ReactDOM.createRoot(document.getElementById('root')).render(
+  // <ErrorBoundary> {/* Wrap everything inside ErrorBoundary */}
+  // </ErrorBoundary>
+    <RouterProvider router={router} />
+);
