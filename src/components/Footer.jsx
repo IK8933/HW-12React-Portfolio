@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-green-600 text-white py-4 text-center">
+        <footer className="bg-indigo-500 text-white py-4 text-center">
             <div className="flex justify-center space-x-6">
                 <a
                     href="https://github.com/IK8933"
