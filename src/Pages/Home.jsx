@@ -1,12 +1,17 @@
+import HeroSection from './HeroSection';
 const Home = () => {
     return (
         
         <div>
-            
-            <h1>Welcome to My Portfolio!</h1>
-            <p>This is the Home page.</p>
+            <HeroSection />
+            <section className="mt-8">
+                <h2 className="text-2xl font-bold mb-4">Welcome!</h2>
+                <p className="text-lg">
+                    This is the body section where you can provide additional information about yourself or your work.
+                </p>
+            </section>
         </div>
     );
 };
 
-export default Home; // Make sure this default export exists
+export default Home; 

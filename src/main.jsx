@@ -7,8 +7,8 @@ import Contact from './Pages/Contact';
 import Aboutme from './Pages/Aboutme';
 import Resume from './Pages/Resume';
 import Portfolio from './Pages/Portfolio';
-// import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary
 import './index.css';
+
 
 const router = createBrowserRouter([
   {
@@ -41,7 +41,5 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <ErrorBoundary> {/* Wrap everything inside ErrorBoundary */}
-  // </ErrorBoundary>
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />
 );

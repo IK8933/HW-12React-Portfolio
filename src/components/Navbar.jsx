@@ -1,61 +1,68 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-    const location = useLocation();
-    const currentPage = location.pathname;
-
     return (
         <nav className="bg-green-600 p-4 shadow-md" aria-label="Main navigation">
             <ul className="flex justify-center space-x-6">
                 <li className="nav-item">
-                    <Link
+                    <NavLink
                         to="/"
-                        className={`${
-                            currentPage === '/' ? 'text-blue-600 font-bold' : 'text-gray-700'
-                        } hover:text-blue-500`}
+                        className={({ isActive }) => 
+                            isActive 
+                                ? 'text-blue-600 font-bold' 
+                                : 'text-gray-700 hover:text-blue-500'
+                        }
                     >
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link
+                    <NavLink
                         to="/About"
-                        className={`${
-                            currentPage === '/About' ? 'text-blue-600 font-bold' : 'text-gray-700'
-                        } hover:text-blue-500`}
+                        className={({ isActive }) => 
+                            isActive 
+                                ? 'text-blue-600 font-bold' 
+                                : 'text-gray-700 hover:text-blue-500'
+                        }
                     >
-                        About me
-                    </Link>
+                        About Me
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link
-                        to="/Contact"
-                        className={`${
-                            currentPage === '/Contact' ? 'text-blue-600 font-bold' : 'text-gray-700'
-                        } hover:text-blue-500`}
-                    >
-                        Contact
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link
+                    <NavLink
                         to="/Portfolio"
-                        className={`${
-                            currentPage === '/Portfolio' ? 'text-blue-600 font-bold' : 'text-gray-700'
-                        } hover:text-blue-500`}
+                        className={({ isActive }) => 
+                            isActive 
+                                ? 'text-blue-600 font-bold' 
+                                : 'text-gray-700 hover:text-blue-500'
+                        }
                     >
                         Portfolio
-                    </Link>
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link
+                    <NavLink
+                        to="/Contact"
+                        className={({ isActive }) => 
+                            isActive 
+                                ? 'text-blue-600 font-bold' 
+                                : 'text-gray-700 hover:text-blue-500'
+                        }
+                    >
+                        Contact
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink
                         to="/Resume"
-                        className={`${
-                            currentPage === '/Resume' ? 'text-blue-600 font-bold' : 'text-gray-700'
-                        } hover:text-blue-500`}
+                        className={({ isActive }) => 
+                            isActive 
+                                ? 'text-blue-600 font-bold' 
+                                : 'text-gray-700 hover:text-blue-500'
+                        }
                     >
                         Resume
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
