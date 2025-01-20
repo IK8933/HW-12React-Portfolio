@@ -20,7 +20,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                             className={({ isActive }) =>
                                 isActive
                                     ? 'text-blue-600 font-bold'
-                                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-500'
+                                    : 'text-gray-300 dark:text-gray-500 hover:text-blue-900 dark:hover:text-blue-500'
                             }
                         >
                             {label}

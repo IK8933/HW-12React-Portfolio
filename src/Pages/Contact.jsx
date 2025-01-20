@@ -75,12 +75,18 @@ const Contact = () => {
     ];
 
     return (
-        <section className="p-8 bg-gray-100">
-            <h1 className="text-3xl font-bold mb-6 text-center">Contact Me</h1>
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white shadow-md p-6 rounded">
+        <section className="p-8 bg-gray-70 dark:bg-gray-900">
+            <h1 className="text-3xl font-bold text-blue-700 dark:text-blue-300 mb-6 text-center">Contact Me</h1>
+            <form
+                onSubmit={handleSubmit}
+                className="max-w-md mx-auto bg-gray-500 dark:bg-gray-800 shadow-md p-6 rounded"
+            >
                 {fields.map(({ id, label, type, value, error }) => (
                     <div key={id} className="mb-4">
-                        <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+                        <label
+                            htmlFor={id}
+                            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                        >
                             {label}
                         </label>
                         {type === 'textarea' ? (
@@ -91,7 +97,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 rows="4"
-                                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 rounded-md shadow-sm focus:ring-blue-500 dark:focus:ring-blue-300 focus:border-blue-500 dark:focus:border-blue-300"
                             ></textarea>
                         ) : (
                             <input
@@ -101,7 +107,7 @@ const Contact = () => {
                                 value={value}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                className="mt-1 block w-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 rounded-md shadow-sm focus:ring-blue-500 dark:focus:ring-blue-300 focus:border-blue-500 dark:focus:border-blue-300"
                             />
                         )}
                         {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
@@ -109,7 +115,7 @@ const Contact = () => {
                 ))}
                 <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-gray-700"
+                    className="w-full bg-blue-500 dark:bg-blue-700 text-white py-2 px-4 rounded hover:bg-gray-700 dark:hover:bg-gray-600"
                 >
                     Submit
                 </button>
