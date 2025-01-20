@@ -10,6 +10,7 @@ export default {
       'hero-bg': "url('./assets/Backgroundimg.webp')",
       'portfolio-bg': "url('./assets/Backgroundimg2.webp')"
   },
+  
 },
   },
   plugins: [],

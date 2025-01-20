@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import Error from './Pages/Error';
-import Home from './Pages/Home';
-import Contact from './Pages/Contact';
+import Error from './pages/Error';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 import Aboutme from './Pages/Aboutme';
 import Resume from './Pages/Resume';
 import Portfolio from './Pages/Portfolio';
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />, // Default error handling for routing issues
+    errorElement: <Error />, 
     children: [
       {
         index: true,

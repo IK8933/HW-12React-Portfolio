@@ -6,7 +6,7 @@ const HeroSection = () => {
             <h1 className="text-4xl text-yellow-0 font-bold">Welcome to My Portfolio</h1>
             <Link
                 to="/Portfolio" 
-                className="mt-20 inline-block bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="mt-40 inline-block bg-blue-900 hover:bg-blue-700 hover:text-gray-300 text-white font-bold py-2 px-4 rounded"
             >
                 View My Work
             </Link>

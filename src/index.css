@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add global styles */
 body {
-    @apply bg-gray-50 text-gray-800 font-sans; /* Light background, dark text */
+    @apply bg-gray-500 text-gray-800 font-sans; 
     body {
-    @apply bg-gray-50 text-gray-800 font-sans; /* Light background and dark text */
+    @apply bg-gray-500 text-gray-800 font-sans; 
     margin: 0;
     padding: 0;
 }
