@@ -1,12 +1,13 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import Error from './pages/Error.jsx'; 
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Aboutme from './pages/Aboutme'; // Correct casing here
-import Resume from './pages/Resume'; // Correct casing here
-import Portfolio from './pages/Portfolio'; // Correct casing here
+import Home from './pages/Home.jsx';
+import Contact from './pages/Contact.jsx';
+import Aboutme from './pages/Aboutme.jsx';
+import Resume from './pages/Resume.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import Error from './pages/Error.jsx';
+
 import './index.css';
 
 const router = createBrowserRouter([
