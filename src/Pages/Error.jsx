@@ -7,4 +7,4 @@ const Error = () => {
     );
 };
 
-export default Error; // Make sure this default export exists
+export default Error; 
