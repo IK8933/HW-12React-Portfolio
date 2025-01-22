@@ -56,7 +56,9 @@ const Portfolio = () => {
                         <img 
                             src={project.image} 
                             alt={project.title} 
-                            className="w-full h-48 object-cover rounded mb-4"
+                            className={`w-full h-48 object-cover rounded mb-4 ${
+                                project.id === 2 ? 'object-[50%_20%]' : 'object-center'
+                            }`}
                         />
                         <h3 className="text-lg font-semibold">{project.title}</h3>
                         <p>{project.description}</p>
