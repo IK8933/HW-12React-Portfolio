@@ -1,19 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Add this
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// CORS configuration
+// Configure CORS
 const corsOptions = {
-    origin: 'https://kessack-portfolio.netlify.app', // Your Netlify frontend URL
+    origin: 'https://kessack-portfolio.netlify.app', // Your frontend's Netlify URL
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type'], // Allowed headers
 };
-app.use(cors(corsOptions)); // Use CORS middleware with the options
+app.use(cors(corsOptions)); // Enable CORS with the options
 
 app.use(bodyParser.json());
 
