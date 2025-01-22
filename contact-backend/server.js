@@ -1,20 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const cors = require('cors'); // Add this
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-// Load environment variables
-const emailUser = process.env.EMAIL_USER;
-const emailPass = process.env.EMAIL_PASS;
-const receiverEmail = process.env.RECEIVER_EMAIL;
-
-console.log('Email User:', emailUser); // For testing purposes only; remove in production.
-
 const app = express();
-const PORT = process.env.PORT || 5000; // Use the PORT environment variable assigned by Render
+const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+    origin: 'https://kessack-portfolio.netlify.app', // Your Netlify frontend URL
+    methods: ['GET', 'POST'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type'], // Allowed headers
+};
+app.use(cors(corsOptions)); // Use CORS middleware with the options
+
 app.use(bodyParser.json());
 
 app.post('/send', async (req, res) => {
@@ -26,16 +26,16 @@ app.post('/send', async (req, res) => {
 
     try {
         const transporter = nodemailer.createTransport({
-            service: 'Gmail', // Or your email service
+            service: 'Gmail',
             auth: {
-                user: emailUser,
-                pass: emailPass,
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
             },
         });
 
         await transporter.sendMail({
             from: email,
-            to: receiverEmail,
+            to: process.env.RECEIVER_EMAIL,
             subject: `New message from ${name}`,
             text: message,
         });
@@ -47,5 +47,6 @@ app.post('/send', async (req, res) => {
     }
 });
 
-// Listen on PORT and bind to 0.0.0.0 for external access
-app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
+});
