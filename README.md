@@ -21,8 +21,8 @@ My React portfolio showcases my journey into the tech industry and highlights my
    ```bash
 for localHost:
    git clone https://github.com/IK8933/HW-12React-Portfolio.git
-   npm install
-   npm start
+   -npm install
+   -npm start
 You can view the live project here: [Kessack Portfolio](https://kessack-portfolio.netlify.app/)
 
 ## Video
