@@ -20,9 +20,10 @@ My React portfolio showcases my journey into the tech industry and highlights my
 
  !!FIX!!
 
-## Usage
+## Video
 
-!!FIX!!
+[HW-12React-Portfolio.webm](https://github.com/user-attachments/assets/3ee7c8a9-8c24-42ef-984a-d95333676ddf)
+
 
 ## License
 
