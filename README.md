@@ -23,7 +23,6 @@ My React portfolio showcases my journey into the tech industry and highlights my
 ### Option 3: **Use a Combination**
 If you want to mix both styles for clarity:
 
-```markdown
 ## For LocalHost:
 To run the project locally:
 
