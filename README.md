@@ -18,7 +18,12 @@ My React portfolio showcases my journey into the tech industry and highlights my
 
 ## Installation
 
- !!FIX!!
+Follow these steps to set up and run the backend project locally:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/<your-username>/contact-backend.git
+   cd contact-backend
 
 ## Video
 
