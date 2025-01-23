@@ -17,12 +17,20 @@ My React portfolio showcases my journey into the tech industry and highlights my
 - [Questions](#questions)
 
 ## Installation
-1. **Clone the Repository**
+
+---
+
+### Option 3: **Use a Combination**
+If you want to mix both styles for clarity:
+
+```markdown
+## For LocalHost:
+To run the project locally:
+
+1. Clone the repository:
    ```bash
-for localHost:
    git clone https://github.com/IK8933/HW-12React-Portfolio.git
-   -npm install
-   -npm start
+
 You can view the live project here: [Kessack Portfolio](https://kessack-portfolio.netlify.app/)
 
 ## Video
