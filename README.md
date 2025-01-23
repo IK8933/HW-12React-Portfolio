@@ -17,13 +17,13 @@ My React portfolio showcases my journey into the tech industry and highlights my
 - [Questions](#questions)
 
 ## Installation
-
-Follow these steps to set up and run the backend project locally:
-
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/<your-username>/contact-backend.git
-   cd contact-backend
+for localHost:
+   git clone https://github.com/IK8933/HW-12React-Portfolio.git
+   npm install
+   npm start
+You can view the live project here: [Kessack Portfolio](https://kessack-portfolio.netlify.app/)
 
 ## Video
 
@@ -34,11 +34,8 @@ Follow these steps to set up and run the backend project locally:
 
 [License](https://opensource.org/licenses/MIT)
 
-## Contributing
-
-## Tests
-
-## Questions
+## future development:
+I am currently in the process of linking my personal Email to both the email emogi in the footer and allowing users to send me direct messages from the contact page. 
 
 For any questions, contact me at:
 -GitHub: [IK8933](https://github.com/IK8933)
