@@ -31,14 +31,14 @@ const projects = [
         title: "Employee Tracker",
         description: "Employee Tracker is a command-line application designed to manage a company's employee database efficiently. Built using Node.js, Inquirer.js, and MySQL, the tool allows users to add, view, update, and manage employee records, roles, and departments. This project demonstrates strong backend development skills, showcasing proficiency in database management, SQL queries, and modular code organization. It’s a practical solution for streamlining HR and administrative tasks.",
         image: image4, // Imported image
-        github: "https://github.com/IK8933/HW7WeatherDashboard.git",
+        github: "https://github.com/IK8933/HW8Employee-Tracker.git",
     },
     {
         id: 5,
         title: "Weather Tracker",
         description: "Weather Tracker is a dynamic web application that provides real-time weather information for user-specified locations. Using the OpenWeather API, the app displays current conditions, a 5-day forecast, and key metrics like temperature, humidity, and wind speed. Built with JavaScript, HTML, and CSS, the project showcases skills in API integration, responsive design, and user interaction. Its intuitive interface makes it a valuable tool for planning and staying informed about weather conditions.",
         image: image5, // Imported image
-        github: "https://github.com/IK8933/HW8Employee-Tracker.git",
+        github: "https://github.com/IK8933/HW7WeatherDashboard.git",
     },
 ];
 
