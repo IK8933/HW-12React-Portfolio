@@ -18,21 +18,31 @@ My React portfolio showcases my journey into the tech industry and highlights my
 
 ## Installation
 
- !!FIX!!
+---
 
-## Usage
+### Option 3: **Use a Combination**
+If you want to mix both styles for clarity:
 
-!!FIX!!
+## For LocalHost:
+To run the project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/IK8933/HW-12React-Portfolio.git
+
+You can view the live project here: [Kessack Portfolio](https://kessack-portfolio.netlify.app/)
+
+## Video
+
+[HW-12React-Portfolio.webm](https://github.com/user-attachments/assets/3ee7c8a9-8c24-42ef-984a-d95333676ddf)
+
 
 ## License
 
 [License](https://opensource.org/licenses/MIT)
 
-## Contributing
-
-## Tests
-
-## Questions
+## future development:
+I am currently in the process of linking my personal Email to both the email emogi in the footer and allowing users to send me direct messages from the contact page. 
 
 For any questions, contact me at:
 -GitHub: [IK8933](https://github.com/IK8933)
