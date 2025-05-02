@@ -1,4 +1,4 @@
-import resumePDF from '../assets/IKessack_CV 2024.pdf';
+import resumePDF from '../assets/IKessack_CV 2025.pdf';
 
 const Resume = () => {
     return (
