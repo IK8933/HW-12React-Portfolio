@@ -21,12 +21,15 @@ const Footer = () => {
                     LinkedIn
                 </a>
                 <a
-                    href="mailto:iankessack1989@gmail.com"
-                    className="hover:text-blue-700 dark:hover:text-blue-300"
-                    aria-label="Email"
-                >
-                    Email
-                </a>
+    onClick={() => {
+        navigator.clipboard.writeText('iankessack1989@gmail.com');
+        alert('Email copied to clipboard!');
+    }}
+    className="cursor-pointer hover:text-blue-700 dark:hover:text-blue-300"
+    aria-label="Copy Email"
+>
+    Copy Email
+</a>
             </div>
             <p className="mt-4 text-sm">&copy; 2025 Ian Kessack. All Rights Reserved.</p>
         </footer>
