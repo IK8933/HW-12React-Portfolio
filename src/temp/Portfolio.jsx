@@ -3,6 +3,8 @@ import image2 from '../assets/Jumperimg.webp';
 import image3 from '../assets/vehiclebuilderimg.webp';
 import image4 from '../assets/employeetrackerimg.webp';
 import image5 from '../assets/weathertrackerimg.webp';
+import image6 from '../assets/Grid-Venture-portfolio img.png';
+import image7 from '../assets/Wordle-portfolio-img.png';
 
 const projects = [
     {
@@ -18,6 +20,7 @@ const projects = [
         description: "Jumper is an interactive and engaging platformer game designed as a collaborative project. The game challenges players to navigate a character through a series of obstacles, showcasing logic, creativity, and seamless user interaction. Developed in collaboration with other team members, Jumper emphasizes teamwork, problem-solving, and attention to detail. The project demonstrates proficiency in JavaScript for game mechanics, CSS for styling, and efficient event handling to create an enjoyable gaming experience.",
         image: image2, // Imported image
         github: "https://github.com/rvrutan/jumper.git",
+        Website: "https://main.d2udk01zvq4b82.amplifyapp.com"
     },
     {
         id: 3,
@@ -39,7 +42,24 @@ const projects = [
         description: "Weather Tracker is a dynamic web application that provides real-time weather information for user-specified locations. Using the OpenWeather API, the app displays current conditions, a 5-day forecast, and key metrics like temperature, humidity, and wind speed. Built with JavaScript, HTML, and CSS, the project showcases skills in API integration, responsive design, and user interaction. Its intuitive interface makes it a valuable tool for planning and staying informed about weather conditions.",
         image: image5, // Imported image
         github: "https://github.com/IK8933/HW7WeatherDashboard.git",
+    },  
+    {
+        id: 6,
+        title: "Grid_Venture",
+        description: "Grid-Venture is a tile-based puzzle adventure game featuring fog-of-war exploration and item-triggered events. Players explore, gather tools, and solve map-based puzzles while interacting with NPCs. Developed with React, Node.js, MongoDB, Tailwind CSS, and deployed on AWS Amplify.",
+        image: image6, // Adjusted to a unique image if available
+        github: "https://github.com/IK8933/Grid-VentureApp.git",
+        Website: "https://main.d3di6mrkoy0u21.amplifyapp.com"
     },
+    {
+        id: 7,
+        title: "Wordle Clone",
+        description: "A browser-based clone of the popular Wordle game, featuring randomized daily word selection from a valid word list, input validation, and styled feedback tiles for accuracy (correct, present, absent). Built with JavaScript, HTML, CSS, and Tailwind CSS, the game offers a responsive UI and includes automated test coverage with GitHub Actions. Deployed using AWS Amplify.",
+        image: image7,
+        github: "https://github.com/IK8933/wordle_project.git",
+        Website: "https://main.d22ryjodg59ixx.amplifyapp.com"
+    }
+
 ];
 
 const Portfolio = () => {
@@ -56,20 +76,34 @@ const Portfolio = () => {
                         <img 
                             src={project.image} 
                             alt={project.title} 
-                            className={`w-full h-48 object-cover rounded mb-4 ${
-                                project.id === 2 ? 'object-[50%_20%]' : 'object-center'
-                            }`}
+                            className="w-full h-80 object-cover object-top rounded mb-4"
+
                         />
+
                         <h3 className="text-lg font-semibold">{project.title}</h3>
                         <p>{project.description}</p>
-                        <a 
-                            href={project.github} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        >
+                        <div className="mt-4 flex flex-wrap gap-4">
+                            <a 
+                                href={project.github} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            >
                             View on GitHub
-                        </a>
+                            </a>
+
+                            {project.Website && (
+                            <a 
+                                href={project.Website} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                            >
+                            Live Site
+                            </a>
+                            )}
+                            </div>
+
                     </div>
                 ))}
             </div>
