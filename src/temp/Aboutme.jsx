@@ -1,5 +1,5 @@
 import backgroundImage from '../assets/blue-flowers.jpeg';
-import portraitImage from '../assets/class-photo.jpg';
+import portraitImage from '../assets/MyPhoto3.png';
 
 const Aboutme = () => {
     return (
