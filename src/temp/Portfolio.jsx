@@ -50,8 +50,8 @@ const projects = [
     title: "Grid_Venture",
     description: "Grid-Venture is a tile-based puzzle adventure game featuring fog-of-war exploration and item-triggered events. Players explore, gather tools, and solve map-based puzzles while interacting with NPCs. Developed with React, Node.js, MongoDB, Tailwind CSS, and deployed on AWS Amplify.",
     image: image6,
-    github: "https://github.com/IK8933/Grid-VentureApp.git",
-    Website: "https://main.d3di6mrkoy0u21.amplifyapp.com"
+    github: "https://github.com/IK8933/Grid-Venture.git",
+    Website: "https://grid-venture-ruby.vercel.app"
   },
   {
     id: 7,
