@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-gray-500 text-gray-800 font-sans; 
+
     body {
     @apply bg-gray-500 text-gray-800 font-sans; 
     margin: 0;
@@ -20,7 +19,7 @@ a {
 }
 
 p {
-    @apply text-gray-700 leading-relaxed;
+    @apply leading-relaxed;
 }
-}
+
 

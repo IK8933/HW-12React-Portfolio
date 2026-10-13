@@ -65,9 +65,12 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="p-8 bg-portfolio-bg bg-cover bg-center text-gray-900">
+    <section
+      id="portfolio"
+      className="p-8 bg-portfolio-bg bg-cover bg-center text-slate-900 dark:text-white"
+    >
       <motion.h1
-        className="text-3xl font-bold mb-6 text-center"
+        className="text-3xl font-bold mb-6 text-center text-slate-900 dark:text-blue-900"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -76,7 +79,7 @@ const Portfolio = () => {
       </motion.h1>
 
       <motion.h2
-        className="text-2xl font-bold mb-4"
+        className="text-3xl font-bold mb-6 text-left text-slate-900 dark:text-blue-900"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -84,47 +87,63 @@ const Portfolio = () => {
         My Projects
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* 🚩 Grid remains stationary when a card expands */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
         {projects.map((project) => (
-          <motion.div
+          <div
             key={project.id}
-            className="bg-white/90 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 2.0, delay: project.id * 0.1 }}
+            className="group relative min-w-0 h-[520px] hover:z-50"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-60 object-cover rounded-t-2xl"
-            />
+            <motion.div
+              className="absolute inset-x-0 top-0 bg-cyan-50 dark:bg-[#172B38]/95 backdrop-blur-xl rounded-2xl border border-cyan-400 dark:border-cyan-700/40 shadow-lg group-hover:shadow-2xl overflow-hidden flex flex-col min-h-full transition-transform duration-700 ease-in-out group-hover:scale-[1.03]"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: project.id * 0.1 }}
+            >
+              {/* 🚩 Image expands to its natural proportions on hover */}
+              <div className="w-full h-60 group-hover:h-[320px] overflow-hidden rounded-t-2xl transition-[height] duration-700 ease-in-out">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="block w-full h-full object-cover object-center group-hover:object-contain transition-all duration-700 ease-in-out"
+                />
+              </div>
 
-            <div className="p-4 flex flex-col flex-grow">
-              <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-700 flex-grow">{project.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2 transition-transform duration-200 hover:scale-105"
-                >
-                  <FaGithub /> GitHub
-                </a>
-                {project.Website && (
+              {/* 🚩 Description and buttons stay visible below the image */}
+              <div className="p-4 flex flex-col flex-grow">
+                <h3 className="text-lg font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm text-slate-700 dark:text-slate-300 flex-grow">
+                  {project.description}
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
                   <a
-                    href={project.Website}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2 transition-transform duration-200 hover:scale-105"
+                    className="bg-cyan-400 hover:bg-cyan-300 text-[#0B1017] font-bold py-2 px-4 rounded flex items-center gap-2 transition-transform duration-200 hover:scale-105"
                   >
-                    <FaExternalLinkAlt /> Live Site
+                    <FaGithub /> GitHub
                   </a>
-                )}
+
+                  {project.Website && (
+                    <a
+                      href={project.Website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-cyan-700 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded flex items-center gap-2 transition-transform duration-200 hover:scale-105"
+                    >
+                      <FaExternalLinkAlt /> Live Site
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         ))}
       </div>
     </section>

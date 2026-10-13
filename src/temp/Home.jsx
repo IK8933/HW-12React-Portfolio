@@ -1,51 +1,66 @@
+
 import HeroSection from './HeroSection';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    return (
-        <div>
-            <HeroSection />
+  const cardStyle = "bg-cyan-50 dark:bg-[#172B38]/95 border border-cyan-400 dark:border-cyan-700/40 p-6 rounded-xl shadow-[0_0_22px_rgba(34,211,238,0.22)] dark:shadow-xl";
+  const headingStyle = "text-xl font-bold text-cyan-800 dark:text-cyan-400 mb-2";
+  const textStyle = "text-sm text-slate-700 dark:text-slate-300";
 
-            {/* 🔹 Professional Intro */}
-            <section className="text-center py-8 px-4 bg-transparent dark:bg-transparent">
-                <p className="text-lg text-gray-800 dark:text-gray-200 max-w-3xl mx-auto">
-                I&apos;m Ian Kessack &mdash; a full-stack developer with a background in biomedical science and a passion for crafting responsive, engaging web experiences. I build apps that solve real problems, with clean code and sharp UI.
-                </p>
-            </section>
+  return (
+    <div className="min-h-screen bg-slate-100 dark:bg-[#0B1017]">
+      <HeroSection />
 
-            {/* 🔹 Highlight Cards */}
-            <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto text-left mt-4">
-                <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded shadow-md">
-                    <h3 className="text-xl font-bold text-blue-700 dark:text-blue-300 mb-2">Tech Stack</h3>
-                    <p className="text-sm text-gray-800 dark:text-gray-200">React, Tailwind CSS, Node.js, Express, MongoDB, GraphQL</p>
-                </div>
-                <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded shadow-md">
-                    <h3 className="text-xl font-bold text-blue-700 dark:text-blue-300 mb-2">Experience</h3>
-                    <p className="text-sm text-gray-800 dark:text-gray-200">8 years in medicine, now delivering professional-grade web applications with a scientific mindset.</p>
-                </div>
-                <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded shadow-md">
-                    <h3 className="text-xl font-bold text-blue-700 dark:text-blue-300 mb-2">Projects</h3>
-                    <p className="text-sm text-gray-800 dark:text-gray-200">Grid-Venture, Glimmer, Jumper, and more. Clean UIs, strong logic, and real-world value.</p>
-                </div>
-            </section>
+      {/* Professional Intro */}
+      <section className="text-center py-8 px-4 bg-transparent">
+        <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
+          I&apos;m Ian Kessack &mdash; a full-stack developer with a background in biomedical science
+          and years of experience solving problems in demanding, detail-oriented environments. I bring that same analytical mindset to software development,
+          turning ideas and challenges into working applications.
+        </p>
+      </section>
 
-            {/* 🔹 Let’s Collaborate Section */}
-            <section className="mt-12 text-center py-8 bg-transparent dark:bg-transparent">
-                <h2 className="text-2xl text-blue-900 dark:text-blue-400 font-bold mb-4">
-                    Let’s Collaborate!
-                </h2>
-                <p className="text-lg mb-6 text-gray-800 dark:text-gray-100">
-                    Looking for a developer who brings both creativity and precision? I’d love to help bring your next project to life.
-                </p>
-                <Link
-                    to="/contact"
-                    className="bg-blue-500 hover:bg-blue-700 hover:text-gray-300 text-white py-2 px-6 rounded text-lg transition duration-300"
-                >
-                    Contact Me
-                </Link>
-            </section>
+      {/* Highlight Cards */}
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 px-6 max-w-6xl mx-auto text-left mt-4">
+        <div className={cardStyle}>
+          <h3 className={headingStyle}>Full-Stack Development</h3>
+          <p className={textStyle}>
+            Responsive front ends, server-side applications, database integration, authentication, and API development.
+          </p>
         </div>
-    );
+
+        <div className={cardStyle}>
+          <h3 className={headingStyle}>Technologies</h3>
+          <p className={textStyle}>
+            JavaScript • TypeScript • Python • React • Node.js • Express • MongoDB • PostgreSQL • GraphQL • REST APIs
+          </p>
+        </div>
+
+        <div className={cardStyle}>
+          <h3 className={headingStyle}>Tools & Deployment</h3>
+          <p className={textStyle}>
+            Git • GitHub • Vite • npm • AWS Amplify • Render • Vercel • Netlify
+          </p>
+        </div>
+      </section>
+
+      {/* Let's Collaborate Section */}
+      <section className="mt-12 text-center py-8 bg-transparent">
+        <h2 className="text-2xl text-cyan-800 dark:text-cyan-400 font-bold mb-4">
+          Let’s Connect
+        </h2>
+        <p className="text-lg mb-6 text-slate-700 dark:text-slate-300">
+          I’m currently seeking opportunities to contribute my full-stack development skills to a professional software team.
+        </p>
+        <Link
+          to="/contact"
+          className="inline-block bg-cyan-400 hover:bg-cyan-300 text-[#0B1017] font-bold py-3 px-6 rounded-md transition-colors shadow-[0_0_14px_rgba(34,211,238,0.25)]"
+        >
+          Contact Me
+        </Link>
+      </section>
+    </div>
+  );
 };
 
 export default Home;
